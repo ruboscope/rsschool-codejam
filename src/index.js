@@ -3,7 +3,7 @@
  *  которая возвращает массив, в котором каждый элемент по индексу i - это сумма остальных элементов оригинального массива.
  */
 
-function sumOfOther(...array) {
+module.exports.sumOfOther = function sumOfOther(...array) {
   const newArray = array.map((value) => array.reduce((acc, current) => acc + current) - value);
   return newArray;
 }
@@ -12,7 +12,7 @@ function sumOfOther(...array) {
  * Реализовать функцию make, которая запоминает аргументы и после выполняет операцию над ними
  */
 
-function make(...args) {
+module.exports.make = function make(...args) {
   //Возвращаем функцию с аргументами
   return function (...result) {
 
@@ -33,7 +33,7 @@ function make(...args) {
 /**
  * Реализовать функцию recursion, которая получает на вход дерево и преобразует его в массив
  */
-function recursion(obj, index = 0, array = []) {
+module.exports.recursion = function recursion(obj, index = 0, array = []) {
   if (array[index] === undefined) {
     array[index] = [];
   }

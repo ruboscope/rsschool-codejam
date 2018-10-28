@@ -1,0 +1,22 @@
+{
+  "name": "rsschool-codejam",
+  "version": "1.0.0",
+  "description": "CodeJam-3 CoreJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruboscope/rsschool-codejam.git"
+  },
+  "author": "Andrei Zhukau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruboscope/rsschool-codejam/issues"
+  },
+  "homepage": "https://github.com/ruboscope/rsschool-codejam#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}

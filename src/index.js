@@ -3,7 +3,7 @@
  *  которая возвращает массив, в котором каждый элемент по индексу i - это сумма остальных элементов оригинального массива.
  */
 
-function sumOfOther(array) {
+function sumOfOther(...array) {
   const newArray = array.map((value) => array.reduce((acc, current) => acc + current) - value);
   return newArray;
 }
@@ -11,6 +11,7 @@ function sumOfOther(array) {
 /**
  * Реализовать функцию make, которая запоминает аргументы и после выполняет операцию над ними
  */
+
 function make(...args) {
   //Возвращаем функцию с аргументами
   return function (...result) {
@@ -27,4 +28,22 @@ function make(...args) {
     args.push(...result);
     return make(args);
   }
+}
+
+/**
+ * Реализовать функцию recursion, которая получает на вход дерево и преобразует его в массив
+ */
+function recursion(obj, index = 0, array = []) {
+  if (array[index] === undefined) {
+    array[index] = [];
+  }
+  const nextIndex = index + 1;
+  for (let k in obj) {
+    if (obj[k] && typeof obj[k] === 'object') {
+      recursion(obj[k], nextIndex, array);
+    } else {
+      array[index].push(obj[k]);
+    }
+  }
+  return array;
 }

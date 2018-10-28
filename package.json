@@ -1,0 +1,28 @@
+{
+  "name": "rsschool-codejam",
+  "version": "1.0.0",
+  "description": "CodeJam-3 CoreJS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha test.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruboscope/rsschool-codejam.git"
+  },
+  "author": "Andrei Zhukau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruboscope/rsschool-codejam/issues"
+  },
+  "homepage": "https://github.com/ruboscope/rsschool-codejam#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}

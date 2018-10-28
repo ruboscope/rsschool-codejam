@@ -3,7 +3,7 @@
  *  которая возвращает массив, в котором каждый элемент по индексу i - это сумма остальных элементов оригинального массива.
  */
 
-module.exports.sumOfOther = function sumOfOther(...array) {
+module.exports.sumOfOther = function sumOfOther(array) {
   const newArray = array.map((value) => array.reduce((acc, current) => acc + current) - value);
   return newArray;
 }
@@ -15,7 +15,6 @@ module.exports.sumOfOther = function sumOfOther(...array) {
 module.exports.make = function make(...args) {
   //Возвращаем функцию с аргументами
   return function (...result) {
-
     // Если аргумент - функция, то выполняем ее и возвращаем результат
     if (typeof result[0] === 'function') {
       return args[0].reduce(result[0], 0);
@@ -38,7 +37,7 @@ module.exports.recursion = function recursion(obj, index = 0, array = []) {
     array[index] = [];
   }
   const nextIndex = index + 1;
-  for (let k in obj) {
+  for (const k in obj) {
     if (obj[k] && typeof obj[k] === 'object') {
       recursion(obj[k], nextIndex, array);
     } else {
